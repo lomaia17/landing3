@@ -51,12 +51,17 @@ nav {
   transform: translateY(2px);
 }
 
-.icon-number span {
+.icon-number a {
   color: #fff;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-decoration: none;
+}
+
+.icon-number a:hover{
+  color:#fff !important;
 }
 
 .hero {
@@ -81,6 +86,10 @@ nav {
   margin-top: 13px;
 }
 
+.hero-img{
+  cursor: pointer;
+}
+
 .hero-img-mobile {
   display: none;
 }
@@ -95,9 +104,11 @@ nav {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
+  cursor:auto !important;
 }
 
 .hero-home {
+  margin-top:30px;
   width: 738px;
   height: 402px;
   position: absolute;
@@ -145,11 +156,16 @@ nav {
 }
 
 .card-title {
-  padding: 9px 5px 9px 11px;
+  padding: 9px 20px 9px 11px;
   display: flex;
   gap: 10px;
 }
-
+.close{
+  position: absolute;
+  right:20px;
+  background-color: transparent;
+  border: none;
+}
 .card2 h1 {
   color: #000;
   font-size: 24px;
@@ -440,10 +456,16 @@ nav {
 .accordion-button::after{
   background-image:url('./assets/faq-icon2.png') !important;
 }
+.accordion-button:focus{
+  box-shadow:none !important;
+}
 .list {
   margin-top: 28px;
 }
 
+.accordion-button{
+  margin-right:20px;
+}
 ul {
   display: flex;
   justify-content: center;
@@ -519,9 +541,14 @@ li {
   font-weight: 400;
 }
 
-.contact h2 {
+.contact a h2{
   font-size: 24px;
   font-weight: 700;
+  color:black;
+}
+
+.contact a{
+  text-decoration: none;
 }
 
 footer {
@@ -574,9 +601,6 @@ footer p {
   .mob_button{
     display:block;
   }
-  .bar-chart{
-    padding:0 20px;
-  }
   img {
     width: 100%;
     height: auto;
@@ -594,7 +618,7 @@ footer p {
     width: 230px;
     margin: 0 auto;
   }
-
+  
   .hero-img {
     display: none;
   }
@@ -812,7 +836,6 @@ footer p {
   .card-additional-button {
     width: 336px;
     font-size: 24px;
-    padding: 16px 0;
     height: 60px;
     margin-top: 23px;
   }
@@ -923,7 +946,7 @@ footer p {
     border: 0;
     background: transparent;
     color: #3A5BA8;
-    font-size: 24px;
+    font-size: 18px;
     margin-top: 100px;
     cursor: pointer;
   }
@@ -948,4 +971,13 @@ footer p {
 }
 .diagram_img{
   width:100%;
+}
+
+.modal-content{
+  width:auto !important;
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: column;
 }
