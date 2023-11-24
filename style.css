@@ -15,7 +15,7 @@
 }
 
 body {
-  background: #F4F4F4;
+  background: #F4F4F4 !important;
   font-family:"You Normal" !important;
 }
 
@@ -132,6 +132,7 @@ nav {
 .cards {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   gap: 16px;
 }
 
@@ -139,26 +140,22 @@ nav {
   border-radius: 8px;
   background: #3a5ba8;
   color: white;
-  position: relative;
-  padding-top:30px;
+  padding-top:20px;
   padding-left:10px;
-  bottom: 30px;
 }
 
 .card2 {
   width: 100%;
   border-radius: 8px;
   background: rgba(58, 91, 168, 0.2);
-  position: relative;
-  top: 20px;
-  padding:47px 50px;
-  margin-bottom:50px;
+  padding:47px 50px 0 50px;
 }
-
+.card1 .card-title:last-child{
+  padding-bottom:20px;
+}
 .card-title {
   padding: 9px 20px 9px 11px;
   display: flex;
-  gap: 10px;
 }
 .close{
   position: absolute;
@@ -170,13 +167,15 @@ nav {
   color: #000;
   font-size: 24px;
   font-weight: 700;
+  width:80%;
 }
 
 .card2 p {
   color: #000;
   font-size: 16px;
   font-weight: 400;
-  margin-top:19px;
+  margin-top:40px;
+  width:90%;
 }
 
 .additional-text {
@@ -317,7 +316,7 @@ nav {
 }
 
 .example {
-  width: 544px;
+  width: 100%;
   height: 100%;
   border-radius: 8px;
   background: rgba(58, 91, 168, 0.20);
@@ -336,11 +335,12 @@ nav {
 }
 
 .example-content span {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
 .example-content p {
+  font-size: 1rem;
   margin-bottom: 13px;
 }
 
@@ -399,7 +399,6 @@ nav {
 }
 
 .card-additional-button {
-  margin-top: 20px;
   width: 144px;
   height: 40px;
   border-radius: 8px;
@@ -597,6 +596,10 @@ footer p {
   box-shadow: none;
   border:none;
 }
+.card-title p, .card-title{
+  margin-bottom:0;
+  margin-left:5px;
+}
 @media only screen and (min-width:1500px){
   .hero-home{
     width:900px;
@@ -610,9 +613,6 @@ footer p {
 @media only screen and (max-width:1200px){
   .sections{
     width:80%;
-  }
-  .example{
-    width:auto;
   }
 }
 @media only screen and (max-width:750px ){
@@ -638,6 +638,13 @@ footer p {
     position: static;
     transform: translate(0, 0);
   }
+}
+
+.card-section{
+  display: flex;
+  flex-direction: column;
+  gap:25px;
+  width:100%;
 }
 @media only screen and (max-width: 576px) {
   #mobModal .accordion-body{
@@ -726,16 +733,16 @@ footer p {
     color: #000;
     font-size: 24px;
     font-weight: 700;
-    padding: 40px 0 20px 21px;
+    padding: 40px 0 0 21px;
   }
 
   .card1 {
     width: 100%;
     border-radius: 0;
     position: static;
-    padding: 25px 6px 15px 15px;
+    padding: 25px 6px 0 15px;
+    margin-top:0;
   }
-
   .card-title {
     padding: 0;
     padding-bottom: 9px;
@@ -751,12 +758,13 @@ footer p {
 
   .card2 h1 {
     padding: 0;
-    padding: 31px 14px 21px 17px;
+    padding: 31px 14px 0 17px;
   }
 
   .card2 p {
     padding: 17px 10px 17px 18px;
     background: rgba(251, 192, 65, 0.20);
+    width: 100%;
   }
 
   .example {
@@ -1007,7 +1015,7 @@ footer p {
   }
 
   .contact p {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -1062,4 +1070,8 @@ iframe{
 
 ::-webkit-scrollbar-thumb:window-inactive {
   background: none;
+}
+
+#pills-profile .list{
+  height:330px;
 }
