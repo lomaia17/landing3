@@ -896,7 +896,7 @@ footer p {
   }
 
   .faq-header {
-    margin-top: 31px;
+    margin-top: 45px;
     width: 201px;
     margin-left: 20px;
   }
@@ -1019,6 +1019,7 @@ footer p {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.05)!important;
 }
 .diagram_img{
+  border-radius:5px;
   width:100%;
 }
 
